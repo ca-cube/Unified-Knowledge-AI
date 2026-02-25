@@ -148,8 +148,9 @@ export default function Dashboard() {
                                             );
                                         })}
                                     </div>
-                                    <div className="glass-card p-4 flex items-center gap-4 flex-col text-sm text-slate-400 italic">
-                                        <div className="flex items-center gap-2">
+                                    <div className="glass-card p-4 flex items-center gap-4 flex-col text-sm text-slate-400 italic relative overflow-hidden">
+                                        <div className="absolute inset-0 scan-line opacity-30 pointer-events-none" />
+                                        <div className="flex items-center gap-2 relative z-10">
                                             <RefreshCcw className="w-4 h-4 animate-spin" />
                                             <span>{steps[activeStep].label} in progress...</span>
                                         </div>
