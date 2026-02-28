@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { ElementType } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -186,7 +186,7 @@ export default function LandingPage() {
     );
 }
 
-function FeatureItem({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) {
+function FeatureItem({ icon: Icon, title, desc }: { icon: ElementType, title: string, desc: string }) {
     return (
         <div className="group">
             <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-blue-600/10 group-hover:border-blue-500/50 transition-all">

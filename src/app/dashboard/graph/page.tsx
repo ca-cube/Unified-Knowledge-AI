@@ -103,7 +103,7 @@ export default function GraphPage() {
                                     <h3 className="font-bold text-sm">GNN Reasoning Engine</h3>
                                 </div>
                                 <p className="text-[10px] text-slate-400 leading-relaxed italic border-l-2 border-blue-500 pl-3">
-                                    "Verifying graph consistency... Cluster 4 identifies a potential conflict between local SOP-9 and HIPAA Privacy Rule (Subpart E). Remediation: Apply strictest constraint."
+                                    &quot;Verifying graph consistency... Cluster 4 identifies a potential conflict between local SOP-9 and HIPAA Privacy Rule (Subpart E). Remediation: Apply strictest constraint.&quot;
                                 </p>
                             </div>
                         </div>
@@ -114,7 +114,7 @@ export default function GraphPage() {
     );
 }
 
-function Node({ x, y, icon: Icon, label, color, active = false }: { x: string, y: string, icon: any, label: string, color: string, active?: boolean }) {
+function Node({ x, y, icon: Icon, label, color, active = false }: { x: string, y: string, icon: ElementType, label: string, color: string, active?: boolean }) {
     return (
         <div
             className="absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2 group transition-all duration-500"

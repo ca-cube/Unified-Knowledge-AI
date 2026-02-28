@@ -1,7 +1,8 @@
 import React from "react";
 import { Network, ShieldAlert, Cpu } from "lucide-react";
+import { ReasoningStep as TraceStep } from "@/lib/compliance/types";
 
-export function PolicySimulator({ reasoningTrace }: { reasoningTrace: any[] }) {
+export function PolicySimulator({ reasoningTrace }: { reasoningTrace: TraceStep[] }) {
     return (
         <div className="glass-card p-6 bg-blue-900/10 border-blue-500/20 overflow-hidden relative">
             <div className="absolute top-0 right-0 p-4 opacity-10">

@@ -14,7 +14,8 @@ import {
 } from "lucide-react";
 import { PolicySimulator } from "@/components/PolicySimulator";
 import { Sidebar } from "@/components/layout/Sidebar";
-import React from "react";
+import React, { ElementType } from "react";
+import { UnifiedResponse, DocumentMetadata, ReasoningStep as TraceStep } from "@/lib/compliance/types";
 
 export default function Dashboard() {
     const [query, setQuery] = useState("");
@@ -30,7 +31,7 @@ export default function Dashboard() {
         { label: "Citation-Locked Generation", icon: ShieldCheck, color: "text-blue-500" }
     ];
 
-    const [resultData, setResultData] = useState<any>(null);
+    const [resultData, setResultData] = useState<UnifiedResponse | null>(null);
 
     const handleSearch = async () => {
         if (!query) return;
@@ -189,7 +190,7 @@ export default function Dashboard() {
                                                 Formal Policy Reasoning Trace
                                             </h3>
                                             <div className="space-y-3">
-                                                {resultData.reasoningTrace.map((step: any, idx: number) => (
+                                                {resultData.reasoningTrace.map((step: TraceStep, idx: number) => (
                                                     <ReasoningStep
                                                         key={idx}
                                                         title={step.component + ": " + step.action}
@@ -210,7 +211,7 @@ export default function Dashboard() {
                                                 Citation Lock
                                             </h3>
                                             <div className="space-y-4">
-                                                {resultData.citations.map((doc: any, idx: number) => (
+                                                {resultData.citations.map((doc: DocumentMetadata, idx: number) => (
                                                     <SourceItem
                                                         key={idx}
                                                         title={doc.title}
@@ -270,7 +271,7 @@ export default function Dashboard() {
     );
 }
 
-function FeatureCard({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) {
+function FeatureCard({ icon: Icon, title, desc }: { icon: ElementType, title: string, desc: string }) {
     return (
         <div className="glass-card p-6 hover:border-white/20 transition-all cursor-pointer group">
             <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
