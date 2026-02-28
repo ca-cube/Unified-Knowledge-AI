@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { ElementType } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 import {
     Network,

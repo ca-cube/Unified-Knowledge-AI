@@ -1,10 +1,10 @@
 {
   "/api/query/route": "app/api/query/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/dashboard/graph/page": "app/dashboard/graph/page.js",
   "/dashboard/page": "app/dashboard/page.js",
-  "/dashboard/policies/page": "app/dashboard/policies/page.js",
+  "/dashboard/graph/page": "app/dashboard/graph/page.js",
   "/dashboard/audit/page": "app/dashboard/audit/page.js",
+  "/dashboard/sources/page": "app/dashboard/sources/page.js",
   "/page": "app/page.js",
-  "/dashboard/sources/page": "app/dashboard/sources/page.js"
+  "/dashboard/policies/page": "app/dashboard/policies/page.js"
 }

@@ -117,7 +117,7 @@ export default function PoliciesPage() {
                                         <h3 className="font-bold text-amber-500">Governance Review</h3>
                                     </div>
                                     <p className="text-xs text-amber-200/60 leading-relaxed mb-6">
-                                        3 policies are currently in "Shadow Mode" and require manual validation before full enforcement in the Healthcare_SEC cluster.
+                                        3 policies are currently in &quot;Shadow Mode&quot; and require manual validation before full enforcement in the Healthcare_SEC cluster.
                                     </p>
                                     <button className="w-full py-2 bg-amber-500 text-black text-xs font-bold rounded-lg hover:bg-amber-400 transition-all">Review Diff</button>
                                 </div>

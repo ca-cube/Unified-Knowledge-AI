@@ -71,7 +71,7 @@ export default function Dashboard() {
             }, 1500);
             return () => clearInterval(interval);
         }
-    }, [isProcessing]);
+    }, [isProcessing, steps.length]);
 
     return (
         <div className="flex h-screen bg-[#0a0a0c] text-slate-200 overflow-hidden">
